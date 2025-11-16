@@ -1,0 +1,16 @@
+:root{
+    font-family: poppins, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+

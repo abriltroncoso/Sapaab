@@ -1,0 +1,16 @@
+.btn-quiero-adoptar{
+    border-radius: 6px;
+    border: 2px solid #FF7D04;
+    background-color: #FF7D04;
+     color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+.btn-quiero-adoptar:hover{
+    background-color: #FCB16B;
+    border: 2px solid #FCB16B;
+    cursor: pointer;
+    transform: scale(1.03);
+}
