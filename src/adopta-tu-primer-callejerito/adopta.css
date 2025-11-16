@@ -93,20 +93,46 @@
 
 @media (max-width: 480px){
     .adopta-container{
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 16px 12px;
         gap: 16px;
+        text-align: center;
     }
     .adopta-container h2{
         font-size: 32px;
         max-width: 100%;
+        margin: 0 auto 12px auto;
     }
     .adopta-container h4{
         font-size: 14px;
         max-width: 100%;
+        margin: 0 auto 20px auto;
     }
-    .info{ margin-left: 0; }
-    .perritos img{ width: 48%; }
+    .info{ 
+        margin-left: 0;
+        order: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .perritos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: -1; /* place the image above the text on mobile */
+    }
+    /* Show only first image */
+    .perritos img:first-child{
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+    }
+    /* Hide second image */
+    .perritos img:nth-child(2){
+        display: none;
+    }
 }
 
 

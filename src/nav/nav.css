@@ -72,28 +72,102 @@
 @media (max-width: 768px){
     .nav{
         padding: 8px 16px;
-        flex-wrap: wrap;
+        position: relative;
+        z-index: 20;
+        
     }
+    
+    /* Hamburger button */
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 100;
+        padding: 4px;
+    }
+    
+    .hamburger span{
+        width: 24px;
+        height: 2px;
+        background-color: #6F6F6F;
+        border-radius: 2px;
+        transition: all 300ms ease;
+        display: block;
+    }
+    
+    /* Hamburger animation when open */
+    .hamburger span.open:nth-child(1){
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    .hamburger span.open:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger span.open:nth-child(3){
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+    
+    /* Nav items wrapper mobile */
+    .nav-items-wrapper{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-bottom: 2px solid #FF7D04;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 300ms ease;
+    }
+    
+    .nav-items-wrapper.open{
+        max-height: 500px;
+    }
+    
     .navItems{
-        gap: 32px;
+        flex-direction: column;
+        gap: 16px;
         font-size: 14px;
         margin-right: 0;
+        padding: 16px;
+        align-items: flex-start;
     }
+    
     .btn-donar, .btn-quiero-adoptar{
         font-size: 14px;
         padding: 6px 12px;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px){
+    .hamburger span{
+        width: 20px;
+    }
+    
     .navItems{
-        gap: 16px;
+        gap: 12px;
         font-size: 12px;
-        flex-wrap: wrap;
+        padding: 12px;
     }
     .btn-donar, .btn-quiero-adoptar{
         font-size: 12px;
         padding: 4px 8px;
+    }
+}
+
+/* Desktop: hide hamburger */
+@media (min-width: 769px){
+    .hamburger{
+        display: none;
+    }
+    .nav-items-wrapper{
+        position: static;
+        max-height: none;
+        border: none;
+        background: none;
     }
 }
 

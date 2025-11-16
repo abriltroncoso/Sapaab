@@ -5,6 +5,7 @@ import imgC from '../assets/porque3.svg';
 import imgD from '../assets/porque4.svg';
 import imgE from '../assets/porque5.svg';
 export default function PorqueAdoptar() {
+    
     return(
         <div className="porque-adoptar">
             <div className="img-column left">

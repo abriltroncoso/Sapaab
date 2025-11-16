@@ -41,8 +41,16 @@
 }
 
 @media (max-width: 900px){
-    .dog-illustration{ display: none; }
-    .ellos-te-necesitan{ padding: 40px 16px; }
+    .dog-illustration{ 
+        position: static;
+        margin-top: 20px;
+        width: 200px;
+        transform: translateY(0);
+    }
+    .ellos-te-necesitan{ 
+        padding: 40px 16px;
+        flex-direction: column;
+    }
     .ellos-te-necesitan h2{ font-size: 36px; }
     .ellos-te-necesitan p{ max-width: 520px; font-size: 16px; }
 }
@@ -52,6 +60,10 @@
         margin-top: 40px;
         margin-bottom: 40px;
         padding: 24px 12px;
+    }
+    .dog-illustration{
+        width: 160px;
+        margin-top: 16px;
     }
     .ellos-te-necesitan h2{
         font-size: 28px;
