@@ -108,7 +108,7 @@
     }
     /* left images show above content */
     .img-column.left{ 
-        order: -1; 
+        order: 1; 
     }
     /* Asegurar que la columna derecha esté oculta */
     .img-column.right{ 
@@ -124,7 +124,7 @@
         margin-bottom: 8px;
     }
     .porque-adoptar p{
-        font-size: 15px;
+        font-size: 18px;
         margin: 8px 0;
         max-width: 100%;
         text-align: center;
@@ -133,5 +133,13 @@
         order: 0; 
         max-width: 100%;
         text-align: center;
+        padding: 8px;
+    }
+
+    .porque-adoptar button {
+        margin-top: 20px;
+        margin-bottom: 20px;    
+        padding: 6px 30px;
+        font-size: 16px;    
     }
 }
