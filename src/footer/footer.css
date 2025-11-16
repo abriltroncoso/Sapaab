@@ -48,12 +48,13 @@
 
 @media (max-width: 480px){
     .footer{
-        padding: 16px 12px;
+        padding: 10px 12px;
         gap: 12px;
     }
     .icons{ 
         gap: 12px; 
         padding: 0;
+        display: none   ;
     }
     .footer .icons img:hover{
         cursor: pointer;

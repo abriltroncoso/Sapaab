@@ -81,12 +81,17 @@
     .hamburger{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 6px;
         background: none;
         border: none;
         cursor: pointer;
         z-index: 100;
-        padding: 4px;
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        position: relative;
     }
     
     .hamburger span{
@@ -96,17 +101,31 @@
         border-radius: 2px;
         transition: all 300ms ease;
         display: block;
+        position: absolute;
     }
     
-    /* Hamburger animation when open */
+    /* Posición inicial de cada línea */
+    .hamburger span:nth-child(1){
+        top: 12px;
+    }
+    .hamburger span:nth-child(2){
+        top: 19px;
+    }
+    .hamburger span:nth-child(3){
+        top: 26px;
+    }
+    
+    /* Hamburger animation when open - CORREGIDO */
     .hamburger span.open:nth-child(1){
-        transform: rotate(45deg) translate(8px, 8px);
+        top: 19px;
+        transform: rotate(45deg);
     }
     .hamburger span.open:nth-child(2){
         opacity: 0;
     }
     .hamburger span.open:nth-child(3){
-        transform: rotate(-45deg) translate(8px, -8px);
+        top: 19px;
+        transform: rotate(-45deg);
     }
     
     /* Nav items wrapper mobile */
@@ -129,7 +148,7 @@
     .navItems{
         flex-direction: column;
         gap: 16px;
-        font-size: 14px;
+        font-size: 20px;
         margin-right: 0;
         padding: 16px;
         align-items: flex-start;
@@ -143,17 +162,41 @@
 }
 
 @media (max-width: 480px){
+    .hamburger{
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+    
     .hamburger span{
         width: 20px;
     }
     
+    /* Ajuste posiciones para móvil pequeño */
+    .hamburger span:nth-child(1){
+        top: 10px;
+    }
+    .hamburger span:nth-child(2){
+        top: 17px;
+    }
+    .hamburger span:nth-child(3){
+        top: 24px;
+    }
+    
+    .hamburger span.open:nth-child(1){
+        top: 17px;
+    }
+    .hamburger span.open:nth-child(3){
+        top: 17px;
+    }
+    
     .navItems{
         gap: 12px;
-        font-size: 12px;
+        font-size: 18px;
         padding: 12px;
     }
     .btn-donar, .btn-quiero-adoptar{
-        font-size: 12px;
+        font-size: 16px;
         padding: 4px 8px;
     }
 }
@@ -170,4 +213,3 @@
         background: none;
     }
 }
-
