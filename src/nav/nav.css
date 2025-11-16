@@ -68,3 +68,32 @@
     transform: scale(1.03);
 }
 
+/* Mobile responsive */
+@media (max-width: 768px){
+    .nav{
+        padding: 8px 16px;
+        flex-wrap: wrap;
+    }
+    .navItems{
+        gap: 32px;
+        font-size: 14px;
+        margin-right: 0;
+    }
+    .btn-donar, .btn-quiero-adoptar{
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px){
+    .navItems{
+        gap: 16px;
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+    .btn-donar, .btn-quiero-adoptar{
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+

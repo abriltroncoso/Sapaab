@@ -1,4 +1,4 @@
-import './PorqueAdoptar.css';
+import './porqueAdoptar.css';
 import imgA from '../assets/porque1.svg';
 import imgB from '../assets/porque2.svg';
 import imgC from '../assets/porque3.svg';

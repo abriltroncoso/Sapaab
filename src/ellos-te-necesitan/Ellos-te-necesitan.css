@@ -46,3 +46,25 @@
     .ellos-te-necesitan h2{ font-size: 36px; }
     .ellos-te-necesitan p{ max-width: 520px; font-size: 16px; }
 }
+
+@media (max-width: 480px){
+    .ellos-te-necesitan{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 24px 12px;
+    }
+    .ellos-te-necesitan h2{
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    .ellos-te-necesitan p{
+        font-size: 14px;
+        max-width: 100%;
+        margin: 12px 0;
+        line-height: 1.6;
+    }
+    .ellos-te-necesitan .btn-quiero-adoptar{
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}

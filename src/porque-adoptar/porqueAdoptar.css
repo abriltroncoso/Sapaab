@@ -72,3 +72,20 @@
     .porque-adoptar{ padding: 56px 16px; }
     .porque-adoptar .content{ max-width: 680px; }
 }
+
+@media (max-width: 480px){
+    .porque-adoptar{
+        margin-top: 60px;
+        padding: 32px 12px;
+    }
+    .porque-adoptar h2{
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    .porque-adoptar p{
+        font-size: 14px;
+        margin: 12px 0;
+    }
+    .img-column{ gap: 8px; }
+    .img1, .img2, .img3, .img4, .img5{ width: 80px; }
+}

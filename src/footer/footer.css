@@ -33,3 +33,11 @@
     }
     .footer .icons{ margin-left: 0; }
 }
+
+@media (max-width: 480px){
+    .footer{
+        padding: 16px 12px;
+        gap: 12px;
+    }
+    .icons{ gap: 12px; }
+}
