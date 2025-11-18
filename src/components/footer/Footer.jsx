@@ -1,6 +1,6 @@
-import gmailIcon from '../assets/gmail.svg';
-import instaframIcon from '../assets/instagram.svg';
-import facebookIcon from '../assets/facebook.svg';
+import gmailIcon from '../../assets/gmail.svg';
+import instaframIcon from '../../assets/instagram.svg';
+import facebookIcon from '../../assets/facebook.svg';
 import './footer.css';
 
 export default function Footer(){

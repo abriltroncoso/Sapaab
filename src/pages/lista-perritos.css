@@ -1,0 +1,159 @@
+/* ListaPerritos.css */
+
+.lista-perritos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.lista-perritos-container h2 {
+  text-align: center;
+  color: #FF7D04;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: poppins, sans-serif;
+  font-size: 50px;
+  
+}
+
+/* Grid de perritos */
+.perritos-grid {
+  display: grid;
+  /* 4 columnas en pantallas grandes */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 20px 0;
+}
+
+/* Card de cada perrito */
+.perrito-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 360px;
+}
+
+.perrito-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Foto del perrito */
+.perrito-foto {
+  width: 100%;
+  /* Permitir que la imagen crezca dentro del flex para ocupar más espacio */
+  flex: 2 1 0;
+  height: 291px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Info del perrito */
+.perrito-info {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.perrito-info h4 {
+  color: #6F6F6F;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Botón conocer más */
+.btn-conocer {
+  width: 120px;
+  background-color: #FCB16B;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-conocer:hover {
+  background-color: #e66d00;
+  transform: scale(1.02);
+}
+
+.btn-conocer:active {
+  transform: scale(0.98);
+}
+
+/* Loading y Error */
+.loading,
+.error {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.3rem;
+  color: #6F6F6F;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  /* En pantallas medianas usar 3 columnas */
+  .perritos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lista-perritos-container h2 {
+    font-size: 2rem;
+  }
+
+  /* En tablets usar 2 columnas */
+  .perritos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .perrito-foto {
+    aspect-ratio: 4 / 3;
+  }
+
+  .perrito-info {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-perritos-container {
+    padding: 20px 10px;
+  }
+  
+  .lista-perritos-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+
+  .perritos-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .perrito-foto {
+    aspect-ratio: 4 / 3;
+  }
+}

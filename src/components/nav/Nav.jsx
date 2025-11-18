@@ -1,7 +1,7 @@
 import { useState } from "react"
 import NavItems from "./NavItem"
 import "./nav.css"
-import logo from "../assets/logo.svg"
+import logo from "../../assets/logo.svg"
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

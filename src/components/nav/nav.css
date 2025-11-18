@@ -4,6 +4,7 @@
     justify-content: space-between;
     border-bottom: 2px solid #FF7D04;   
 }
+
 .navItems{
     display: flex;
     justify-content: flex-end;
@@ -14,19 +15,20 @@
     font-weight: 500;
     font-size: 16px;
     margin-right: 30px;
-    
 }
 
-.navItems :not(.btn-donar):not(.btn-quiero-adoptar){
+/* Remover estilos por defecto de Link */
+.navItems a {
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
     position: relative;
     display: inline-block;
     padding-bottom: 6px;
-
 }
 
-/* Underline animation */
-.navItems :not(.btn-donar):not(.btn-quiero-adoptar)::after{
+/* Underline animation para Links */
+.navItems a::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -39,17 +41,43 @@
     transition: transform 220ms ease;
 }
 
-.navItems :not(.btn-donar):not(.btn-quiero-adoptar):hover::after,
-.navItems :not(.btn-donar):not(.btn-quiero-adoptar):focus::after,
-.navItems :not(.btn-donar):not(.btn-quiero-adoptar):focus-visible::after{
+.navItems a:hover::after,
+.navItems a:focus::after,
+.navItems a:focus-visible::after {
     transform: translateX(-50%) scaleX(1);
 }
 
-/* Accessible focus ring (keep visible focus for keyboard users) */
-.navItems :not(.btn-donar):not(.btn-quiero-adoptar):focus-visible{
+/* Accessible focus ring para Links */
+.navItems a:focus-visible {
     outline: none;
     box-shadow: 0 0 0 4px rgba(255,125,4,0.12);
     border-radius: 4px;
+}
+
+/* Estilos para li que no son links (como "El refugio") */
+.navItems li:not(:has(a)):not(:has(button)) {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.navItems li:not(:has(a)):not(:has(button))::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: left;
+    height: 2px;
+    width: 100%;
+    background-color: #FF7D04;
+    transition: transform 220ms ease;
+}
+
+.navItems li:not(:has(a)):not(:has(button)):hover::after,
+.navItems li:not(:has(a)):not(:has(button)):focus::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 .btn-donar{
@@ -61,6 +89,7 @@
     padding: 8px 16px;
     font-weight: 500;
 }   
+
 .btn-donar:hover{
     color: #FF7D04;
     border: 2px solid #FF7D04;
@@ -74,7 +103,6 @@
         padding: 8px 16px;
         position: relative;
         z-index: 20;
-        
     }
     
     /* Hamburger button */
@@ -115,7 +143,7 @@
         top: 26px;
     }
     
-    /* Hamburger animation when open - CORREGIDO */
+    /* Hamburger animation when open */
     .hamburger span.open:nth-child(1){
         top: 19px;
         transform: rotate(45deg);

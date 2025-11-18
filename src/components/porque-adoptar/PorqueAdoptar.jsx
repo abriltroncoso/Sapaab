@@ -1,10 +1,15 @@
 import './porqueAdoptar.css';
-import imgA from '../assets/porque1.svg';
-import imgB from '../assets/porque2.svg';
-import imgC from '../assets/porque3.svg';
-import imgD from '../assets/porque4.svg';
-import imgE from '../assets/porque5.svg';
+import imgA from '../../assets/porque1.svg';
+import imgB from '../../assets/porque2.svg';
+import imgC from '../../assets/porque3.svg';
+import imgD from '../../assets/porque4.svg';
+import imgE from '../../assets/porque5.svg';
+import { useNavigate } from 'react-router-dom';
 export default function PorqueAdoptar() {
+    const navigate = useNavigate();
+    const handleAdoptaAhora = () => {
+        navigate('/perritos');
+    }
 
     return(
         <div className="porque-adoptar">
@@ -23,7 +28,7 @@ export default function PorqueAdoptar() {
                 <p>
                     Adoptar es mucho mas que llevar un perro a casa: es salvar una vida y liberar un espacio en el Refugio para que otro callejito pueda ser rescatado. <strong>Es un acto de amor, responsabilidad y compromiso.</strong> 
                 </p>
-                <button className="btn-quiero-adoptar">Adopta ahora</button>
+                <button className="btn-quiero-adoptar" onClick={handleAdoptaAhora}>Adopta ahora</button>
             </div>
 
             <div className="img-column right">
