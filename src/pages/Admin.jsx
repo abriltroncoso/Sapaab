@@ -2,7 +2,7 @@ import {  useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import FormularioPerrito from '../components/FormularioPerrito';
 import ListaPerritosAdmin from '../components/ListaPerritosAdmin';
-import './Admin.css';
+import './admin.css';
 
 export default function Admin() {
   const { user, logout } = useContext(AuthContext);
