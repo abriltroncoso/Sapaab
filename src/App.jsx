@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/nav/Nav.jsx'
 import Footer from './components/footer/Footer.jsx'
 import ListaPerritos  from './pages/ListaPerritos.jsx'
@@ -14,7 +14,7 @@ import Castraciones from './pages/Castraciones.jsx'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Nav />
         
@@ -54,7 +54,7 @@ function App() {
         
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
