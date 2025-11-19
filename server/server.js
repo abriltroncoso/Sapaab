@@ -12,12 +12,10 @@ app.use(cors());
 app.use(express.json());
 
 //conexion a la base de datos
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("Conectado a la base de datos"))
-  .catch((error) =>
-    console.error("Error de conexión a la base de datos:", error)
-  );
+mongoose.connect(process.env.MONGO_URI, {
+  serverSelectionTimeoutMS: 30000, // 30s
+  socketTimeoutMS: 45000, // 45s
+});
 
 //rutas
 app.use("/api/perros", perroRoutes);
