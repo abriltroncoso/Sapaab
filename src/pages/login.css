@@ -1,0 +1,23 @@
+.login-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "poppins", sans-serif;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+}
+h1{
+    color: #ff9d4d;
+}
+.btn-login {
+  background-color: #ff9d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}

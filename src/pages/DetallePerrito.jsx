@@ -35,25 +35,20 @@ export default function DetallePerrito() {
             <div className="detalle-info">
                 <h1 className="perrito-nombre">{perrito.nombre}</h1>
                 <p className="perrito-descripcion">{perrito.descripcion}</p>
-                <button className="btn-adoptar">¡Adoptar!</button>
-                
-                <div className="estrellas-container">
-                    <div className="estrellas">
-                        <span className="estrella naranja">★</span>
-                        <p className="label-estrella">Se lleva con chicos</p>
-                    </div>
-                    <div className="estrellas">
-                        <span className="estrella gris">★</span>
-                        <p className="label-estrella">se lleva con perros</p>
-                    </div>
-                </div>
+                <button className="btn-adoptar" onClick={() =>
+                        window.open("https://wa.me/5492314412280?text=Hola!%20Quiero%20hacer%20una%20consulta", "_blank")
+                    }>¡Adoptar!</button>
             </div>
 
             <div className="galeria-fotos">
-                <img src={perrito.foto} alt={`${perrito.nombre} 1`} className="foto-galeria" />
-                <img src={perrito.foto} alt={`${perrito.nombre} 2`} className="foto-galeria" />
-                <img src={perrito.foto} alt={`${perrito.nombre} 3`} className="foto-galeria" />
-                <img src={perrito.foto} alt={`${perrito.nombre} 4`} className="foto-galeria" />
+                {perrito.fotos.map((url, index) => (
+                    <img
+                    key={index}
+                    src={url}
+                    alt={`${perrito.nombre} ${index + 1}`}
+                    className="foto-galeria"
+                    />
+                ))}
             </div>
         </div>
     )

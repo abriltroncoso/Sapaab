@@ -1,12 +1,10 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import dotenv from "dotenv";
 import perroRoutes from "./routes/Perros.js";
-import process from "process";
-
-dotenv.config();
-
+import authRoutes from "./routes/auth.js";
 const app = express();
 
 //middlewares
@@ -23,7 +21,7 @@ mongoose
 
 //rutas
 app.use("/api/perros", perroRoutes);
-
+app.use("/api/auth", authRoutes);
 // Iniciar servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

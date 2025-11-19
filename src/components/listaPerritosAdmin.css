@@ -1,0 +1,50 @@
+.lista-admin-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.tabla-perritos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-perritos th,
+.tabla-perritos td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.foto-mini {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: fill;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-editar {
+  background: #2b8dfc;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  background: #ff4d4f;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}

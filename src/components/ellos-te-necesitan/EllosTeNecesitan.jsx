@@ -5,9 +5,12 @@ import { useNavigate } from 'react-router-dom';
 
 export default function EllosTeNecesitan() {
     const navigate = useNavigate();
-    const handleComoAyudar = () => {
-        navigate('/como-ayudar');
+  const handleComoAyudar = () => {
+        
+            navigate('/como-ayudar');
+        
     }
+    
     return(
         <div className="ellos-te-necesitan">
             <h2>Ellos te necesitan</h2>

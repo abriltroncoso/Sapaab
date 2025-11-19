@@ -44,7 +44,7 @@ export default function ListaPerritos() {
             <div className="perritos-grid">
                 {perritos.map((perrito) => (
                     <div key={perrito._id} className="perrito-card" onClick={() => verDetallePerro(perrito._id)}>
-                    <img src={perrito.foto} alt={perrito.nombre} className="perrito-foto" />
+                    <img src={perrito.fotos[0]} alt={perrito.nombre} className="perrito-foto" />
                     <div className="perrito-info">
                         <h4>{perrito.nombre}</h4>
                     </div>

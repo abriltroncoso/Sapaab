@@ -1,11 +1,12 @@
-.nav{
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #FF7D04;   
+    border-bottom: 2px solid #FF7D04;
 }
 
-.navItems{
+/* UL */
+.navItems {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -17,7 +18,7 @@
     margin-right: 30px;
 }
 
-/* Remover estilos por defecto de Link */
+/* RESET para links */
 .navItems a {
     text-decoration: none;
     color: inherit;
@@ -27,60 +28,37 @@
     padding-bottom: 6px;
 }
 
-/* Underline animation para Links */
-.navItems a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: left;
-    height: 2px;
-    width: 100%;
-    background-color: #FF7D04;
-    transition: transform 220ms ease;
-}
-
-.navItems a:hover::after,
-.navItems a:focus::after,
-.navItems a:focus-visible::after {
-    transform: translateX(-50%) scaleX(1);
-}
-
-/* Accessible focus ring para Links */
-.navItems a:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(255,125,4,0.12);
-    border-radius: 4px;
-}
-
-/* Estilos para li que no son links (como "El refugio") */
-.navItems li:not(:has(a)):not(:has(button)) {
-    cursor: pointer;
+/* Línea SOLO para li que NO tengan .no-underline */
+.navItems li {
     position: relative;
-    display: inline-block;
-    padding-bottom: 6px;
 }
 
-.navItems li:not(:has(a)):not(:has(button))::after {
+.navItems li.no-underline::after {
+    content: none !important;
+}
+
+/* Línea animada */
+.navItems li:not(.no-underline)::after {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: -4px;
     transform: translateX(-50%) scaleX(0);
-    transform-origin: left;
-    height: 2px;
+    transform-origin: center;
     width: 100%;
+    height: 2px;
     background-color: #FF7D04;
     transition: transform 220ms ease;
 }
 
-.navItems li:not(:has(a)):not(:has(button)):hover::after,
-.navItems li:not(:has(a)):not(:has(button)):focus::after {
+/* Hover */
+.navItems li:not(.no-underline):hover::after,
+.navItems li:not(.no-underline):focus-within::after {
     transform: translateX(-50%) scaleX(1);
 }
 
-.btn-donar{
+/* Botón donar */
+.btn-donar {
     color: #6F6F6F;
     border: 2px solid #6F6F6F;
     border-radius: 6px;
@@ -88,25 +66,24 @@
     font-size: 16px;
     padding: 8px 16px;
     font-weight: 500;
-}   
+}
 
-.btn-donar:hover{
+.btn-donar:hover {
     color: #FF7D04;
     border: 2px solid #FF7D04;
     cursor: pointer;
     transform: scale(1.03);
 }
 
-/* Mobile responsive */
+/* -----------  MOBILE  ------------ */
 @media (max-width: 768px){
-    .nav{
+    .nav {
         padding: 8px 16px;
         position: relative;
         z-index: 20;
     }
-    
-    /* Hamburger button */
-    .hamburger{
+
+    .hamburger {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -121,8 +98,8 @@
         height: 40px;
         position: relative;
     }
-    
-    .hamburger span{
+
+    .hamburger span {
         width: 24px;
         height: 2px;
         background-color: #6F6F6F;
@@ -131,19 +108,11 @@
         display: block;
         position: absolute;
     }
-    
-    /* Posición inicial de cada línea */
-    .hamburger span:nth-child(1){
-        top: 12px;
-    }
-    .hamburger span:nth-child(2){
-        top: 19px;
-    }
-    .hamburger span:nth-child(3){
-        top: 26px;
-    }
-    
-    /* Hamburger animation when open */
+
+    .hamburger span:nth-child(1){ top: 12px; }
+    .hamburger span:nth-child(2){ top: 19px; }
+    .hamburger span:nth-child(3){ top: 26px; }
+
     .hamburger span.open:nth-child(1){
         top: 19px;
         transform: rotate(45deg);
@@ -155,8 +124,7 @@
         top: 19px;
         transform: rotate(-45deg);
     }
-    
-    /* Nav items wrapper mobile */
+
     .nav-items-wrapper{
         position: absolute;
         top: 100%;
@@ -168,11 +136,11 @@
         overflow: hidden;
         transition: max-height 300ms ease;
     }
-    
+
     .nav-items-wrapper.open{
         max-height: 500px;
     }
-    
+
     .navItems{
         flex-direction: column;
         gap: 16px;
@@ -181,7 +149,7 @@
         padding: 16px;
         align-items: flex-start;
     }
-    
+
     .btn-donar, .btn-quiero-adoptar{
         font-size: 14px;
         padding: 6px 12px;
@@ -189,47 +157,38 @@
     }
 }
 
+/* -----------  EXTRA MOBILE  ------------ */
 @media (max-width: 480px){
-    .hamburger{
+    .hamburger {
         width: 36px;
         height: 36px;
         padding: 6px;
     }
-    
-    .hamburger span{
+
+    .hamburger span {
         width: 20px;
     }
-    
-    /* Ajuste posiciones para móvil pequeño */
-    .hamburger span:nth-child(1){
-        top: 10px;
-    }
-    .hamburger span:nth-child(2){
-        top: 17px;
-    }
-    .hamburger span:nth-child(3){
-        top: 24px;
-    }
-    
-    .hamburger span.open:nth-child(1){
-        top: 17px;
-    }
-    .hamburger span.open:nth-child(3){
-        top: 17px;
-    }
-    
+
+    .hamburger span:nth-child(1){ top: 10px; }
+    .hamburger span:nth-child(2){ top: 17px; }
+    .hamburger span:nth-child(3){ top: 24px; }
+
+    .hamburger span.open:nth-child(1){ top: 17px; }
+    .hamburger span.open:nth-child(3){ top: 17px; }
+
     .navItems{
         gap: 12px;
         font-size: 18px;
         padding: 12px;
     }
+
     .btn-donar, .btn-quiero-adoptar{
         font-size: 16px;
         padding: 4px 8px;
     }
 }
 
-/* Desktop: hide hamburger */
+/* Desktop */
 @media (min-width: 769px){
     .hamburger{
         display: none;

@@ -1,0 +1,136 @@
+/* CONTENEDOR */
+.castraciones-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+/* SECCIÓN */
+.castracion-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0;       /* QUITA ESPACIOS EXTRA */
+  padding: 0;      /* QUITA ESPACIOS EXTRA */
+}
+
+/* TEXTO */
+.castracion-section .texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* casi pegados */
+}
+
+.castracion-section .texto h2,
+.castracion-section .texto h3 {
+  margin-left: 120px; /* antes 120px */
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0; /* por si tenían padding por defecto */
+  text-align: left;
+}
+
+.castracion-section h2 {
+  font-size: 42px; /* menos alto = menos espacio */
+  color: #FF7D04;
+  font-weight: 500;
+  max-width: 600px;
+}
+
+.castracion-section h3 {
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 520px;
+  color: #666;
+}
+
+/* IMAGEN */
+.castracion-section .imagen {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.castracion-section img {
+  width: 100%;
+  max-width: 400px;  /* más chica = menos espacio vertical total */
+  height: 400px;     /* bajé altura */
+  border-radius: 20px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* BOTÓN WHATSAPP */
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  width: fit-content;
+  margin-left: 120px;
+  margin-top: 5px; /* casi sin espacio */
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+.castraciones-container{
+        margin-top: 50px;
+    }
+
+  .castracion-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .castracion-section .texto h2,
+  .castracion-section .texto h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .btn-whatsapp {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .castracion-section img {
+    width: 350px;
+    height: 300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .castracion-section h2 {
+    font-size: 28px;
+    max-width: 700px;
+  }
+   /* Contenedor de texto con ancho fijo para alinear líneas */
+  .castracion-section .texto {
+    width: 85%;        /* controla dónde empieza y termina */
+    margin: 0 auto;    /* lo centra */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;          /* separación entre líneas */
+  }
+  
+ 
+}
