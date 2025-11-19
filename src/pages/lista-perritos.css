@@ -120,14 +120,16 @@
   }
 
   .perrito-card {
-    width: 90%;        /* más ancha */
-    max-width: 380px;  /* límite opcional */
-    margin: 0 auto;    /* centrar */
-    height: auto; 
+    width: 90%;
+    max-width: 380px;
+    margin: 0 auto;
+    height: auto; /* deja que la altura dependa del contenido */
   }
 
   .perrito-foto {
-    height: 260px;     /* más alta para móviles */
-    object-fit: fill;
+    width: 100%;
+    height: 250px;       /* altura fija o proporcional */
+    object-fit: cover;   /* llena el contenedor */
+    border-radius: 12px 12px 0 0; /* opcional, si querés esquinas redondeadas solo arriba */
   }
 }
