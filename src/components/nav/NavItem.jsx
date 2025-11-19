@@ -5,7 +5,7 @@ export default function NavItems(){
             <ul className="navItems">
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/como-ayudar">Como Ayudar</Link></li>
-            <li><Link to="/castraciones">castraciones</Link></li>
+            <li><Link to="/castraciones">Castraciones</Link></li>
             <li className="no-underline">
                 <Link to="/perritos">
                     <button className="btn-quiero-adoptar">¡Quiero Adoptar!</button>
