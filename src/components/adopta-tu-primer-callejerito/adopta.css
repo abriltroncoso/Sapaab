@@ -8,7 +8,7 @@
 .adopta-container h2{
     font-size: 55px;
     max-width: 500px;
-    color: #FF7D04;
+    color: #ea9518;
     margin-bottom: 20px;
     font-weight: 400;
 }
@@ -58,8 +58,8 @@
 
 .btn-adoptar-ahora{
     border-radius: 6px;
-    border: 2px solid #FF7D04;
-    background-color: #FF7D04;
+    border: 2px solid #ea9518;
+    background-color: #ea9518;
     color: white;
     font-size: 18px;
     padding: 8px 16px;

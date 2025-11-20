@@ -8,7 +8,7 @@
 
 .lista-perritos-container h2 {
   text-align: center;
-  color: #FF7D04;
+  color: #ea9518;
   font-weight: 400;
   margin-bottom: 10px;
   font-family: poppins, sans-serif;
@@ -97,7 +97,7 @@
 /* Texto del loader */
 .loading-text {
   font-size: 20px;
-  color: #FF7D04;
+  color: #ea9518;
   font-family: poppins, sans-serif;
 }
 

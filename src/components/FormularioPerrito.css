@@ -41,7 +41,7 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #FF7D04;
+  border-color: #ea9518;
 }
 
 .form-group textarea {
@@ -124,7 +124,7 @@
 /* Botón submit */
 .btn-submit {
   width: 100%;
-  background: #FF7D04;
+  background: #ea9518;
   color: white;
   border: none;
   border-radius: 8px;
