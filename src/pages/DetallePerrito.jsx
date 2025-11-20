@@ -27,7 +27,13 @@ export default function DetallePerrito() {
         }
     };
 
-    if (loading) return <p>Cargando detalle del perrito...</p>;
+      if (loading) {
+    return (
+        <div className="loading-container">
+            <p className="loading-text">Cargando informacion del perrito...</p>
+        </div>
+    );
+}
     if (error) return <p>{error}</p>;
 
     return (
