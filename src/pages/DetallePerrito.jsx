@@ -41,9 +41,8 @@ export default function DetallePerrito() {
             <div className="detalle-info">
                 <h1 className="perrito-nombre">{perrito.nombre}</h1>
                 <p className="perrito-descripcion">{perrito.descripcion}</p>
-                <button className="btn-adoptar" onClick={() =>
-                        window.open("https://wa.me/5492314412280?text=Hola!%20Quiero%20hacer%20una%20consulta", "_blank")
-                    }>¡Adoptar!</button>
+                <button className="btn-adoptar" onClick={() => window.open("https://www.instagram.com/direct/t/sapaab_bolivar/", "_blank")}
+                    >¡Adoptar!</button>
             </div>
 
             <div className="galeria-fotos">

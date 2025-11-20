@@ -11,9 +11,8 @@ export default function ComoAyudar() {
                  <div className='columna-izq'>
                 <h1>Tu donacion transforma vidas</h1>
                 <h2>Con tu ayuda podemos seguir rescatando y concientizando. Involucrate y marca la diferencia</h2>
-                <button onClick={() =>
-                        window.open("https://wa.me/5492314412280?text=Hola!%20Quiero%20hacer%20una%20consulta", "_blank")
-                    }>Contactanos</button>
+                <button onClick={() => window.open("https://www.instagram.com/direct/t/sapaab_bolivar/", "_blank")}
+                    >Contactanos</button>
             </div>
             <div>
                 <img src={img} alt="" />
