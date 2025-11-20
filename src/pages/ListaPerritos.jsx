@@ -30,9 +30,14 @@ export default function ListaPerritos() {
         navigate(`/perrito/${id}`);
     };
 
-    if (loading) {
-        return <p>Cargando perritos...</p>;
-    }
+   if (loading) {
+    return (
+        <div className="loading-container">
+            <p className="loading-text">Cargando perritos...</p>
+        </div>
+    );
+}
+
 
     if (error) {
         return <p>{error}</p>;

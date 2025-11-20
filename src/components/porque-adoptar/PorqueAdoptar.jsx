@@ -26,7 +26,7 @@ export default function PorqueAdoptar() {
                      Cuando adoptas, le das una segunda oportunidad a un ser lleno de amor. Cada callejerito ha superado grandes desafios y esta listo para encontrar un nuevo hogar.
                 </p>
                 <p>
-                    Adoptar es mucho mas que llevar un perro a casa: es salvar una vida y liberar un espacio en el Refugio para que otro callejito pueda ser rescatado. <strong>Es un acto de amor, responsabilidad y compromiso.</strong> 
+                    Adoptar es mucho mas que llevar un perro a casa: es salvar una vida y liberar un espacio en el Refugio para que otro callejerito pueda ser rescatado. <strong>Es un acto de amor, responsabilidad y compromiso.</strong> 
                 </p>
                 <button className="btn-quiero-adoptar" onClick={handleAdoptaAhora}>Adopta ahora</button>
             </div>
