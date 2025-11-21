@@ -12,7 +12,7 @@ export default function FormularioPerrito({perritoEdit, onSuccess }) {
     raza: '',
     edad: '',
     tamano: 'mediano',
-    enAdopcion: '',
+    enAdopcion: 'no',
     descripcion: '',
   });
   
@@ -107,7 +107,7 @@ export default function FormularioPerrito({perritoEdit, onSuccess }) {
           raza: formData.raza,
           edad: parseInt(formData.edad),
           tamano: formData.tamano,
-          adoptado: formData.enAdopcion,   // ← CLAVE
+          adoptado: formData.enAdopcion,   
           descripcion: formData.descripcion
 });
         }
@@ -215,7 +215,7 @@ export default function FormularioPerrito({perritoEdit, onSuccess }) {
         <div className="form-group">
           <label htmlFor="tamaño">Tamaño *</label>
           <select
-            id="tamaño"
+            id="tamano"
             name="tamano"
             value={formData.tamano}
             onChange={handleChange}

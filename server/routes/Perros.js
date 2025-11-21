@@ -72,6 +72,8 @@ router.post(
 
   async (req, res) => {
     try {
+      console.log("BODY:", req.body); // 👈 AGREGAR
+      console.log("FILES:", req.files);
       // Validar que haya archivos
       if (!req.files || req.files.length === 0) {
         return res.status(400).json({
