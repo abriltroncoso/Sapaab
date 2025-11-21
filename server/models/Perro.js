@@ -10,11 +10,7 @@ const perroSchema = new mongoose.Schema({
     default: "no",
     require: true,
   },
-  tamano: {
-    type: String,
-    enum: ["pequeño", "mediano", "grande"],
-    required: false,
-  },
+  tamano: { type: String, required: false },
   descripcion: { type: String },
   fechaIngreso: { type: Date, default: Date.now },
   fotos: { type: [String], required: true },
