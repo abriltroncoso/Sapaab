@@ -66,9 +66,9 @@ router.get("/:id", async (req, res) => {
 -------------------------------------------- */
 router.post(
   "/",
+  upload.array("fotos", 4), //
   protegerRuta,
   soloAdmin,
-  upload.array("fotos", 4), // ✅ MULTER PRIMERO
 
   async (req, res) => {
     try {
