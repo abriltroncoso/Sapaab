@@ -32,7 +32,7 @@
 }
 
 .btn-adoptar {
-  background-color: #FF7D04;
+  background-color: #ea9518;
   color: white;
   border: none;
   border-radius: 8px;
@@ -121,7 +121,7 @@
 /* Texto del loader */
 .loading-text {
   font-size: 20px;
-  color: #FF7D04;
+  color: #ea9518;
   font-family: poppins, sans-serif;
 }
 /* Responsive */

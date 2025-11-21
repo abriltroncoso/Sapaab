@@ -6,10 +6,16 @@ import process from "process";
 const router = express.Router();
 
 //generar JWT
-const generarToken = (id) => {
-  return JWT.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: "30d",
-  });
+const generarToken = (usuario) => {
+  return JWT.sign(
+    {
+      id: usuario._id,
+      rol: usuario.rol,
+      email: usuario.email,
+    },
+    process.env.JWT_SECRET,
+    { expiresIn: "30d" }
+  );
 };
 
 //ruta para registrar usuario
@@ -24,7 +30,7 @@ router.post("/registro", async (req, res) => {
 
     const nuevoUsuario = new usuario({ nombre, email, password, rol });
     await nuevoUsuario.save();
-    const token = generarToken(nuevoUsuario._id);
+    const token = generarToken(nuevoUsuario);
     res.status(201).json({
       _id: nuevoUsuario._id,
       nombre: nuevoUsuario.nombre,
@@ -47,7 +53,7 @@ router.post("/login", async (req, res) => {
       usuarioEncontrado &&
       (await usuarioEncontrado.compararPassword(password))
     ) {
-      const token = generarToken(usuarioEncontrado._id);
+      const token = generarToken(usuarioEncontrado);
       res.json({
         _id: usuarioEncontrado._id,
         nombre: usuarioEncontrado.nombre,
