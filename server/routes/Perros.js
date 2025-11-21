@@ -98,7 +98,7 @@ router.post(
         nombre: req.body.nombre,
         raza: req.body.raza,
         edad: parseInt(req.body.edad),
-        tamano: req.body.tamaño,
+        tamano: req.body.tamano,
         adoptado: req.body.adoptado,
         descripcion: req.body.descripcion,
         fotos: fotosUrls,
