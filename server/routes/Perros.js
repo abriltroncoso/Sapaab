@@ -111,6 +111,7 @@ router.post(
       res.status(201).json(perroGuardado);
     } catch (error) {
       res.status(400).json({ mensaje: error.message });
+      console.log(error);
     }
   }
 );
