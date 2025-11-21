@@ -169,21 +169,20 @@
     font-size: 18px;
   }
 
-  .galeria-fotos {
+   .galeria-fotos {
     grid-template-columns: 1fr;
     justify-items: center;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto;          /* 👉 CENTRA LA GALERÍA COMPLETA */
   }
 
   .foto-galeria {
     width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 20px;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
   }
-
   .estrellas-container {
     gap: 20px;
   }
